@@ -1,0 +1,11 @@
+{
+    "api": {
+      "url": "http://app.ardoq.com/api/",
+      "authToken": "<your-ardoq-api-token>",
+      "org": "<your-org-token>"
+    },
+    "workspaces": {
+      "cubes": "<cubes-workspace-id>",
+      "tables": "<tables-workspace-id>"
+    }
+  }

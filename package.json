@@ -2,18 +2,28 @@
   "name": "cube-to-ardoq",
   "version": "0.0.4",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "lint": "eslint --ext .ts src -c .eslintrc.js",
-    "prepare": "yarn build"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "lint": "yarn eslint --ext .ts src",
+    "prepare": "tsdx build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ardoq/cube-to-ardoq.git"
   },
-  "author": "",
+  "module": "dist/cube-to-ardoq.esm.js",
+  "author": "Anton Abilov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ardoq/cube-to-ardoq/issues"
@@ -23,7 +33,9 @@
     "@ardoq/shared-configs": "^0.0.13",
     "@types/node": "^13.7.2",
     "@types/node-fetch": "^2.5.4",
+    "husky": "^4.2.3",
     "ts-node": "^8.6.2",
+    "tsdx": "^0.12.3",
     "typescript": "^3.7.5"
   },
   "dependencies": {

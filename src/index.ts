@@ -192,6 +192,7 @@ export const getGraphFromCube = (metaTransformer: any): ArdoqCubeGraph => {
       );
     } catch (e) {
       console.log(`ERROR WHEN PARSING ${cube.name}`, e.message);
+      console.log(cube.sql());
     }
   });
   const graph = {

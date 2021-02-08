@@ -1,5 +1,5 @@
 import { Parser } from 'node-sql-parser';
-import { sync, Graph, ApiProperties } from 'ardoq-sdk-js';
+import { ApiProperties, Graph, sync } from 'ardoq-sdk-js';
 
 type ArdoqCubeGraph = Graph<{}, {}>;
 
